@@ -14,5 +14,5 @@ repository = "https://github.com/SpaceManiac/opus-rs"
 documentation = "https://docs.rs/opus/0.2.1/opus/"
 
 [dependencies]
-opus-sys = { git="https://github.com/Prior99/rust-opus.git" }
+opus-sys = { git = "https://github.com/Prior99/opus-sys.git" }
 libc = "0.2"

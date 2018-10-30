@@ -220,7 +220,7 @@ impl Encoder {
 			channels as c_int,
 			mode as c_int,
 			&mut error) };
-		if error != ffi::OPUS_OK || ptr.is_null() {
+		if error != ffi::OPUS_OK as c_int || ptr.is_null() {
 			Err(Error::from_code("opus_encoder_create", error))
 		} else {
 			Ok(Encoder { ptr: ptr, channels: channels })
@@ -421,7 +421,7 @@ impl Decoder {
 			sample_rate as i32,
 			channels as c_int,
 			&mut error) };
-		if error != ffi::OPUS_OK || ptr.is_null() {
+		if error != ffi::OPUS_OK as c_int || ptr.is_null() {
 			Err(Error::from_code("opus_decoder_create", error))
 		} else {
 			Ok(Decoder { ptr: ptr, channels: channels })
